@@ -1,2 +1,3 @@
 # jasonu80.github.io
-List of writeups and reports.
+
+A collection of writeups from the Labs that I have completed from different Cyber Security platforms such as TryHackMe, Hack The Box, Cyber Defenders, etc.
