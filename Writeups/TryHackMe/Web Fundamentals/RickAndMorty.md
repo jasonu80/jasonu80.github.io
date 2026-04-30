@@ -71,7 +71,7 @@ We can list the files, but the contents cannot be read.
 
 It returns this error when I ran `cat Sup3rS3cretPickl3Ingred.txt`
 
-![Command Error](./Assets/5.mp4)
+[![Command Error](./Assets/5.mp4)](./Assets/5.mp4)
 
 After trying the bash built-in commands, it still not work. End up looking for a writeup for other clues.
 
