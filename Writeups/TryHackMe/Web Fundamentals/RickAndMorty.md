@@ -16,13 +16,13 @@ This room is a capstone room to prove the skills in web application cyber securi
 
 The first step here is visiting the main page. 
 
-[Screenshot1]
+![Main page](./Assets/1.png)
 
 Based on what I think, it wants the user to utilise burpsuite to intercept any pages. 
 
 After setting the app up, I tried to inspect the website to gain more information. It provides an additional information here:
 
-[Screenshot2]
+![Web Information](./Assets/2.png)
 
 as well as other directories in the webpage. One of which is assets/rickandmorty.jpeg.
 
@@ -34,7 +34,7 @@ Also, I look for other information: using `curl`, `sitemap.xml`, and `favicon.ic
 
 After a few minutes, I realised that I have not enumerate the network. So, I launched nmap and try to scan the website for open ports.
 
-[Screenshot3]
+![nmap Results](./Assets/3.png)
 
 Just an SSH port and the HTTP port. 
 
@@ -54,7 +54,7 @@ From there, I added the extension to command: `gobuster dir -u IP -w /usr/share/
 
 Now, it returned some results. 
 
-[Screenshot4]
+![Gobuster results](./Assets/4.png)
 
 The login seems interesting, it is a login page that has the username and password field. 
 
@@ -71,7 +71,7 @@ We can list the files, but the contents cannot be read.
 
 It returns this error when I ran `cat Sup3rS3cretPickl3Ingred.txt`
 
-[Screenshot5 (video)]
+![Command Error](./Assets/5.mp4)
 
 After trying the bash built-in commands, it still not work. End up looking for a writeup for other clues.
 
@@ -83,7 +83,7 @@ I learned that if the command in the webshell is not working, then search bar ma
 
 From there, I obtained the first flag. 
 
-[Screenshot6]
+![FirstFlag](./Assets/6.png)
 
 Now, I tried to use path traversal to find the second flag. The second flag is located at `/home/rick`. 
 
@@ -93,7 +93,7 @@ Until I realised on a digital forensics challenge, where I used strings to find 
 
 From there, I tried to apply it here and it works here. Got the second flag.
 
-[Screenshot7]
+![SecondFlag](./Assets/7.png)
 
 Now, the third flag is located on the root directory, based on my intuition, since root directory is listed on the main directory `/`. 
 
@@ -109,7 +109,7 @@ I also do not understand what `sudo -l` means, but after reading about it, it sa
 
 Here is the results of running the command `sudo -l`:
 
-[Screenshot8]
+![Permissions](./Assets/8.png)
 
 Now, since it says sudo can be run as a user, it means that this user can run `sudo cmd`.
 
@@ -119,7 +119,7 @@ Then, I tried running `sudo ls /root` to view the contents of `/root` directory 
 
 command: `sudo strings /root/3rd.txt`
 
-[Screenshot9]
+![ThirdFlag](./Assets/9.png)
 
 ## Impact
 
