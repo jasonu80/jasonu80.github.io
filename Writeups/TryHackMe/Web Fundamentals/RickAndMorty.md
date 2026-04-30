@@ -71,7 +71,11 @@ We can list the files, but the contents cannot be read.
 
 It returns this error when I ran `cat Sup3rS3cretPickl3Ingred.txt`
 
-![Video](./Assets/5.mp4)
+<video width="640" height="360" controls>
+  <source src="./Assets/5.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
 
 After trying the bash built-in commands, it still not work. End up looking for a writeup for other clues.
 
