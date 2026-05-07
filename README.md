@@ -4,4 +4,4 @@ This page discusses a wide range of writeup collections from the Labs that I hav
 
 [Challenges that I have conquered](./Writeups)
 
-[Hands-on Labs that I have learned](./Labs%20Completed)
+[Hands-on Labs that I have learned](./Labs)
