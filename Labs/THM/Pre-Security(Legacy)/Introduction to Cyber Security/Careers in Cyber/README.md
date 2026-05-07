@@ -1,3 +1,5 @@
 # Careers in Cyber
 
-A short writeup highlighting career paths, role types, and practical guidance discussed in this cybersecurity careers lesson.
+A short writeup focused on Careers in Cyber with concise notes and key takeaways.
+
+[Writeup](./Report.md)

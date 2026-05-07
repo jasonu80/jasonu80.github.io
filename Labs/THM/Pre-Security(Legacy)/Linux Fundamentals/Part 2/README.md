@@ -1,3 +1,5 @@
 # Part 2
 
-A short writeup summarizing key Linux workflows, commands, and practical takeaways from Linux Fundamentals Part 2.
+A short writeup focused on Part 2 with concise notes and key takeaways.
+
+[Writeup](./Report.md)

@@ -1,3 +1,5 @@
 # Part 1
 
-A short writeup with foundational Linux concepts and practical notes introduced in Linux Fundamentals Part 1.
+A short writeup focused on Part 1 with concise notes and key takeaways.
+
+[Writeup](./Report.md)

@@ -1,3 +1,5 @@
 # How Websites Work
 
-A short writeup explaining the core building blocks of websites and practical notes on how web pages are delivered and rendered.
+A short writeup focused on How Websites Work with concise notes and key takeaways.
+
+[Writeup](./Report.md)

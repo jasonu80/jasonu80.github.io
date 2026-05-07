@@ -1,7 +1,4 @@
+# Linux Fundamentals
 
-# Linux Fundamentals Walkthrough
-
-Completed: December 2024
-
-Redone it: January 2026
+A short writeup focused on Linux Fundamentals with concise notes and key takeaways.
 

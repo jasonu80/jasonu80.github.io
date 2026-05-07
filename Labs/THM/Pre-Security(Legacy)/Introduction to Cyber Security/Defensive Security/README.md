@@ -1,3 +1,5 @@
 # Defensive Security
 
-A short writeup summarizing defensive security fundamentals, protective strategies, and practical observations from this topic.
+A short writeup focused on Defensive Security with concise notes and key takeaways.
+
+[Writeup](./Report.md)

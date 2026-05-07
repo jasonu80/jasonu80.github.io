@@ -1,3 +1,3 @@
 # Introduction to Cyber Security
 
-A short writeup introducing core cyber security concepts, learning objectives, and practical notes from this Pre-Security (Legacy) section.
+A short writeup focused on Introduction to Cyber Security with concise notes and key takeaways.

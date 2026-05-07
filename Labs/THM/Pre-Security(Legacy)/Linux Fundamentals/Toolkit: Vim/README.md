@@ -1,3 +1,5 @@
 # Toolkit: Vim
 
-A short writeup covering practical Vim usage, essential editing commands, and quick notes from this Linux Fundamentals toolkit lesson.
+A short writeup focused on Toolkit: Vim with concise notes and key takeaways.
+
+[Writeup](./Report.md)

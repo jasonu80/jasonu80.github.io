@@ -1,3 +1,5 @@
 # Intro to LAN
 
-A short writeup with essential notes on local area networks, core devices, and how LAN environments are structured.
+A short writeup focused on Intro to LAN with concise notes and key takeaways.
+
+[Writeup](./Report.md)

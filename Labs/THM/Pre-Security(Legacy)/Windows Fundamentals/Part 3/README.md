@@ -1,3 +1,5 @@
 # Part 3
 
-A short writeup summarizing key lessons, commands, and practical understanding from Windows Fundamentals Part 3 in Pre-Security (Legacy).
+A short writeup focused on Part 3 with concise notes and key takeaways.
+
+[Writeup](./Report.md)

@@ -1,3 +1,5 @@
 # DNS in Detail
 
-A short writeup summarizing DNS concepts, lookup flow, and practical notes for understanding name resolution on the web.
+A short writeup focused on DNS in Detail with concise notes and key takeaways.
+
+[Writeup](./Report.md)

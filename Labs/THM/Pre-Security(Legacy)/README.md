@@ -1,5 +1,3 @@
-# Pre-Security (Legacy Version)
+# Pre-Security(Legacy)
 
-This module introduces on the fundamentals of Network, web applications, and how the major Operating Systems work, such as Linux and Windows.
-
-[Intro to Cyber Security](./Introduction%20to%20Cyber%20Security)
+A short writeup collection focused on Pre-Security(Legacy), covering foundational networking, web, Linux, and Windows topics.

@@ -1,3 +1,5 @@
 # Part 1
 
-A short writeup with foundational notes and key takeaways for Windows Fundamentals Part 1 in this Pre-Security (Legacy) path.
+A short writeup focused on Part 1 with concise notes and key takeaways.
+
+[Writeup](./Report.md)

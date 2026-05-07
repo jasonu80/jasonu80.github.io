@@ -1,3 +1,5 @@
 # Putting it all together
 
-A short writeup connecting the core web concepts from earlier lessons into one practical end-to-end understanding.
+A short writeup focused on Putting it all together with concise notes and key takeaways.
+
+[Writeup](./Report.md)

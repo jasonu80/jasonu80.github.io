@@ -1,3 +1,5 @@
 # Part 3
 
-A short writeup outlining the main concepts, command usage, and final notes from Linux Fundamentals Part 3.
+A short writeup focused on Part 3 with concise notes and key takeaways.
+
+[Writeup](./Report.md)

@@ -1,3 +1,5 @@
 # HTTP in Detail
 
-A short writeup covering HTTP fundamentals, request-response behavior, and practical protocol insights from this lesson.
+A short writeup focused on HTTP in Detail with concise notes and key takeaways.
+
+[Writeup](./Report.md)

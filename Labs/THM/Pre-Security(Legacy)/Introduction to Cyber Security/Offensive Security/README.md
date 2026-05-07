@@ -1,3 +1,5 @@
 # Offensive Security
 
-A short writeup with key offensive security ideas, methodology highlights, and practical notes captured in this lesson.
+A short writeup focused on Offensive Security with concise notes and key takeaways.
+
+[Writeup](./Description.md)

@@ -1,3 +1,5 @@
 # Part 2
 
-A short writeup with practical notes and key concepts covered in Windows Fundamentals Part 2 within the Pre-Security (Legacy) track.
+A short writeup focused on Part 2 with concise notes and key takeaways.
+
+[Writeup](./Report.md)
