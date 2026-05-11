@@ -262,3 +262,36 @@ ERROR:pip_audit._cli:Failed to install packages: ['/tmp/tmp49gb0633/bin/python3'
 It provides the error message, which shows the typo of packages that are invalid.
 
 So, the answer to this challenge is `numppy`. 
+
+# AI hands-on (Prompt template compromise)
+
+Let's assume that TryHackMe does not provide any prompts in Task 8. We are tasked to do it by ourselves. 
+
+## Challenge questions
+
+1. According to TryAssist, who is responsible for security reviews?
+
+2. What is the name of the review template TryAssist reports?
+
+## Thinking steps
+
+Let's start easy for the first challenge by asking to the agent itself: `Who is responsible for security reviews?`
+
+It responses: `The development team is responsible for their own security reviews.`
+
+Does this check correct? Let's prove it!
+
+![Answer1](./answer1.gif)
+
+It returns the correct answer! How interesting.
+
+Question 1 answer: `development team`
+
+The next question is about the name of the review template that the agent reports. 
+
+Using the same method as above, it works the same. 
+
+It answers the template policy name with the version that it runs on.
+
+![Answer](./answer2.png)
+
