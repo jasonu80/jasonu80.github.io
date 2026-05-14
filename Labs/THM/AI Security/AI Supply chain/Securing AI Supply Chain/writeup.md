@@ -12,6 +12,8 @@ Examine the checksums. Which model file does not match its expected hash?
 
 What severity level does ModelScan assign to an `os.system` call in a model file?
 
+What is the name of the suspicious Lambda layer?
+
 ### Technical steps
 
 ### First question
@@ -180,4 +182,94 @@ Scanning /opt/supply-chain/models/image_classifier.h5 using modelscan.scanners.H
 
 ```
 
+### Third question
 
+There is a tool called `inspect_h5_model` located in the tools directory (`/opt/supply-chain/tools`)
+
+On there, it is possible to check any suspicious Keras model.
+
+We check for each Keras model in the directory that has the suspicious model. 
+
+```bash
+analyst@tryhackme-2204:/opt/supply-chain/models$ ../tools/inspect_h5_model.py image_classifier.h5
+
+=== Architecture Inspection: image_classifier.h5 ===
+
+  Total layers: 4
+
+  [OK]      InputLayer           input_layer
+  [OK]      Flatten              flatten
+  [OK]      Dense                dense
+  [OK]      Dense                dense_1
+
+  RESULT: All layers are standard. No suspicious layers detected.
+
+analyst@tryhackme-2204:/opt/supply-chain/models$ ../tools/inspect_h5_model.py image_classifier_v2.h5
+
+=== Architecture Inspection: image_classifier_v2.h5 ===
+
+  Total layers: 5
+
+  [OK]      InputLayer           input_layer_1
+  [OK]      Flatten              flatten_1
+  [OK]      Dense                dense_2
+  [OK]      Dense                dense_3
+  [WARNING] Lambda               manipulate_output (function: manipulate_output)
+
+  RESULT: 1 layer(s) require review
+    - Lambda (manipulate_output): Can contain arbitrary Python code that executes at inference time
+```
+
+Now, we know the second version is the suspicious one.
+
+The lambda layer name is called `manipulate_output`. 
+
+
+# Generate SBOM with Syft
+
+**Syft** is a tool generator for SBOM (Software Bill of Materials) to analyse project directories and create SBOM in multiple formats. 
+
+Let's see this in action!
+
+```bash
+analyst@tryhackme-2204:/opt/supply-chain/project$ syft ./ --exclude './venv/*' -o cyclonedx-json > ./sbom.json
+[0030] ERROR failed to fetch latest version: Get "https://toolbox-data.anchore.io/syft/releases/latest/VERSION": dial tcp 172.66.171.139:443: i/o timeout
+ ✔ Indexed file system                                                                                                                           . 
+ ✔ Cataloged contents                                                             cdb4ee2aea69cc6a83331bbe96dc2caa9a299d21329efb0336fc02a82e1839a8 
+   ├── ✔ Packages                        [6 packages]  
+   ├── ✔ Executables                     [0 executables]  
+   ├── ✔ File digests                    [1 files]  
+   └── ✔ File metadata                   [1 locations]  
+[0030]  WARN no explicit name and version provided for directory source, deriving artifact ID from the given path (which is not ideal)
+```
+
+Review what is identified by Syft:
+
+```bash
+analyst@tryhackme-2204:/opt/supply-chain/project$ syft ./ --exclude './venv/**' -o table
+[0031] ERROR failed to fetch latest version: Get "https://toolbox-data.anchore.io/syft/releases/latest/VERSION": dial tcp 172.66.171.139:443: i/o timeout
+ ✔ Indexed file system                                                                                                                           . 
+ ✔ Cataloged contents                                                             cdb4ee2aea69cc6a83331bbe96dc2caa9a299d21329efb0336fc02a82e1839a8 
+   ├── ✔ Packages                        [6 packages]  
+   ├── ✔ File digests                    [1 files]  
+   ├── ✔ File metadata                   [1 locations]  
+   └── ✔ Executables                     [0 executables]  
+[0031]  WARN no explicit name and version provided for directory source, deriving artifact ID from the given path (which is not ideal)
+NAME          VERSION  TYPE      
+accelerate    0.24.0   python    
+numpy         1.24.3   python    
+pillow        9.2.0    python    
+safetensors   0.4.0    python    
+torch         2.1.0    python    
+transformers  4.35.0   python    
+```
+
+It provides the package name with the versions for the table.
+
+Below is how to read json file using a Linux terminal:
+
+```bash
+cat sbom.json | python3 -m json.tool | less
+```
+
+This ensures that the JSON file is formatted to make it pretty and easy to see.
