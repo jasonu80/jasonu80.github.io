@@ -8,11 +8,11 @@
 
 ### Question
 
-Examine the checksums. Which model file does not match its expected hash?
+Examine the checksums. Which model file does not match its expected hash? [First question](#first-question)
 
-What severity level does ModelScan assign to an `os.system` call in a model file?
+What severity level does ModelScan assign to an `os.system` call in a model file? [Second question](#second-question)
 
-What is the name of the suspicious Lambda layer?
+What is the name of the suspicious Lambda layer? [Third question](#third-question)
 
 ### Technical steps
 
