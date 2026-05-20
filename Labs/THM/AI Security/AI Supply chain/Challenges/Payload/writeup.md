@@ -2,7 +2,7 @@
 
 [Link to room](https://tryhackme.com/room/payload)
 
-# Questions and thinking steps
+# Questions
 
 1. Read the deployment log at `/opt/supply-chain/incident/logs/deployment.log`. The replacement model came from a different organisation than the original. What is the name of that organisation? [Question 1](#question-1)
 
